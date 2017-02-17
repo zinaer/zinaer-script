@@ -80,8 +80,6 @@ fwrite($fp, $license);
 fclose($fp);
 
 $fp = fopen($path . '/' . $project_name . '/README.md', 'w');
-
 $title = '### ' . $project_name . "\n\n" . '### LICENSE' . "\n\n" . 'MIT';
-
 fwrite($fp, $title);
 fclose($fp);
