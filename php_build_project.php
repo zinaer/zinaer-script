@@ -45,7 +45,14 @@ fwrite($fp, $footer);
 fclose($fp);
 
 mkdir($path . '/' . $project_name . '/www', 0755);
-fopen($path . '/' . $project_name . '/www/index.php', 'w');
+$fp = fopen($path . '/' . $project_name . '/www/index.php', 'w');
+$index = '<?php
+$path = dirname(dirname(__FILE__));
+include_once($path . \'/templates/header.php\');
+include_once($path . \'/templates/footer.php\');
+';
+fwrite($fp, $index);
+fclose($fp);
 mkdir($path . '/' . $project_name . '/www/css', 0755);
 fopen($path . '/' . $project_name . '/www/css/custom.css', 'w');
 mkdir($path . '/' . $project_name . '/www/js', 0755);
