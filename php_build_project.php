@@ -15,6 +15,7 @@ mkdir($path . '/' . $project_name . '/deploy', 0755);
 mkdir($path . '/' . $project_name . '/deploy/db_schema', 0755);
 fopen($path . '/' . $project_name . '/deploy/db_schema/db.sql', 'w');
 mkdir($path . '/' . $project_name . '/lib', 0755);
+fopen($path . '/' . $project_name . '/lib/custom_function.php', 'w');
 mkdir($path . '/' . $project_name . '/script', 0755);
 fopen($path . '/' . $project_name . '/script/test.php', 'w');
 mkdir($path . '/' . $project_name . '/templates', 0755);
